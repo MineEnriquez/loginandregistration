@@ -1,0 +1,31 @@
+.banner{
+    height: 40px;
+}
+.wrapper{
+    width: 700px;
+    margin: auto auto;
+    border: 5px whitesmoke solid;
+    padding: 50px;
+}
+.banner{
+    height: 10%;
+}
+.centered{
+    text-align: center;
+}
+
+.w-xsmall{
+    width: 10%;
+}
+.w-small{
+    width: 20%;
+}
+.w-medium{
+ width: 40%;
+}
+.w-large{
+width: 50%;
+}
+.w-xlarge{
+    width: 75%;
+}

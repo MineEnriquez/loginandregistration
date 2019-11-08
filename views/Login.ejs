@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css"
+        type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar navbar-expand-lg navbar-dark bg-primary banner">
+        <h1 class="centered">User Registration</h1>
+    </div>
+    <div class="wrapper">
+        <form action="/newuser" method="post">
+            <fieldset>
+                <div class="form-group w-medium">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name"
+                        aria-describedby="First_NameHelp" placeholder="Enter First Name">
+                </div>
+                <div class="form-group w-medium">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" class="form-control" id="last_name" name="last_name"
+                        aria-describedby="last_NameHelp" placeholder="Enter Last Name">
+                </div>
+                <div class="form-group w-xsmall">
+                        <label for="age">Age:</label>
+                        <input type="text" class="form-control" id="age" name="age" >
+                    </div>
+                <div class="form-group w-xlarge">
+                    <label for="InputEmail">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group w-large">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-group w-large">
+                    <label for="cofirm">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirm" name="confirm" placeholder="Confirm Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
