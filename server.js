@@ -5,10 +5,10 @@ const mongoose = require('mongoose');
 const flash = require('express-flash');
 
 app.listen(8000, () => console.log("listening on port 8000"));
-app.use(express.static(__dirname + "/static"));
+app.use(express.static(__dirname + "/client/static"));
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/client/views');
 app.use(flash());
 
 
@@ -32,28 +32,4 @@ const UserSchema = new mongoose.Schema({
 // create an object that contains methods for mongoose to interface with MongoDB
 const User = mongoose.model('User', UserSchema);
 
-app.get('/', (req, res) => {
-    res.render('Login');
-});
-
-app.post('/newuser', (req, res) => {
-    // const user = new User(req.body);
-    const user = new User();
-    user.first_name = req.body.first_name;
-    user.last_name = req.body.last_name;
-    user.age = req.body.age;
-    user.email = req.body.email;
-
-    //TODO - validate passwords match
-    
-    user.save()
-        .then(() => res.redirect('/'))
-        .catch(err => {
-            console.log("We have an error!***************", err);
-            for (var key in err.errors) {
-                console.log(err.errors[key].message);
-                req.flash('newUserErrors', err.errors[key].message);
-            }
-            res.redirect('/');
-        });
-});
+require ('./server/config/routes.js')(app);
